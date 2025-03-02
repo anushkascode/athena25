@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto Mono', monospace;
     font-size: 32px;
+    background-color: white;
 }
 .landing-button {
     background-color: #DE31AD;
