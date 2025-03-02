@@ -1,14 +1,16 @@
 import os
+import random
 import google.generativeai as genai
 from google.generativeai import types
 
-def generate():
-    genai.configure(api_key="AIzaSyCLC9Fza7aZUkttYBElrWvbkxhdNQiQr6M")
+def generate(task):
+    genai.configure(api_key="AIzaSyAx4Y1S1nRPwNpKTED4mH4jsektVuA7zuU")  # Replace with your actual API key
 
     model = genai.GenerativeModel("gemini-2.0-pro-exp-02-05")
 
-    prompt = """Generate a fun fact for the following task: Purchase clothing secondhand"""
-
+    # prompt = "Generate a fun fact for the following task: " + task.random.choice(["Plant a tree", "Buy Clothing Seconhand", "Limit your shower to under 10 minutes", "Purchase Produce from the local Farmer's Market", "Take Low-emission Transportation"])
+    prompt = "Generate a fun fact for the following task: " + task
+    
     safety_settings = [
         types.SafetySettingDict(
             category="HARM_CATEGORY_HARASSMENT",
@@ -41,10 +43,21 @@ def generate():
         prompt,
         generation_config=generation_config,
         safety_settings=safety_settings,
-        stream=True
+        stream=False  # Don't stream to process output easily
     )
 
-    for chunk in response:
-        print(chunk.text, end="")
+    facts = response.text.split("\n\n")  # Split the generated text by double newlines
+    
+    if facts:
+        # lines 2， 4， 6
+        rand = random.choice([2, 4])
+        selected_fact = facts[rand]
+        print("Selected Fact:", selected_fact)
 
-generate() 
+        # Save the selected fact to a file
+        with open("fun_fact.txt", "w", encoding="utf-8") as file:
+            file.write(selected_fact)
+
+        print("Fact saved to fun_fact.txt")
+
+# generate()
