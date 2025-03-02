@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+from funfact import generate
 
 st.title("Sticker Book")
 
@@ -8,6 +9,12 @@ def show_sticker(label, image_link, cam_num):
         image = Image.open(image_link)
         st.image(image)
         cam_num = st.camera_input("Take a pic of your task!")
+        generate()
+        with open("fun_fact.txt", "r", encoding="utf-8") as file:
+            content = file.read()
+        st.write(content)
+
+
 
 col1, col2, col3 = st.columns(3)
 with col1:
