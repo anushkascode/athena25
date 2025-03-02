@@ -50,8 +50,8 @@ def generate(task):
     
     if facts:
         # lines 2， 4， 6
-        rand = random.choice([2, 4])
-        selected_fact = facts[rand]
+        # rand = random.choice([2, 4])
+        selected_fact = facts[2]
         print("Selected Fact:", selected_fact)
 
         # Save the selected fact to a file

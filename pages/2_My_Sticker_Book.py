@@ -29,9 +29,6 @@ def show_sticker(label, image_link, cam_num):
         with open("fun_fact.txt", "r", encoding="utf-8") as file:
             content = file.read()
         st.write(content)
-        
-        st.image(image)
-        cam_num = st.camera_input("Take a pic of your task!")
 
 
 
