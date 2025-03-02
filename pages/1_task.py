@@ -12,7 +12,7 @@ yes1 = st.checkbox("Planted a tree", value=st.session_state.checkbox1_checked)
 
 if yes1:
     st.session_state.checkbox1_checked = True  # Set session state to True when checked
-    image_tree = Image.open("tree.png")  # Load the hardcoded image
+    image_tree = Image.open("assets/thrift.png")  # Load the hardcoded image
 else:
     st.session_state.checkbox1_checked = False
 
@@ -25,7 +25,7 @@ yes2 = st.checkbox("Shop secondhand", value=st.session_state.checkbox2_checked)
 
 if yes2:
     st.session_state.checkbox2_checked = True  # Set session state to True when checked
-    image = Image.open("thrift.png")  # Load the hardcoded image
+    image = Image.open("assets/tree.png")  # Load the hardcoded image
 else:
     st.session_state.checkbox2_checked = False
 

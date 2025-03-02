@@ -4,12 +4,12 @@ from PIL import Image
 st.title("Page 2: Scrapbook")
 
 if "checkbox1_checked" in st.session_state and st.session_state.checkbox1_checked:
-    image = Image.open("tree.png")  # Load the hardcoded image (adjust path if needed)
+    image = Image.open("assets/tree.png")  # Load the hardcoded image (adjust path if needed)
     st.image(image)
     st.write("Tree Planted!")
 
 if "checkbox2_checked" in st.session_state and st.session_state.checkbox2_checked:
-    image = Image.open("thrift.png")  # Load the hardcoded image (adjust path if needed)
+    image = Image.open("assets/thrift.png")  # Load the hardcoded image (adjust path if needed)
     st.image(image)
     st.write("Child Labor Avoided!")
 else:
