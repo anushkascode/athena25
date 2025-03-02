@@ -1,8 +1,7 @@
 import streamlit as st
+from PIL import Image 
 
-yes = st.checkbox("Planted a tree")
 
-if yes:
-    uploaded_file = st.file_uploader("Upload a picture of your task!", type=["jpg", "png", "jpeg"])
-    if uploaded_file is not None:
-        st.image(uploaded_file)
+with open("3_landing.html", "r", encoding = "utf-8") as file:
+    html_content = file.read()
+st.markdown(html_content, unsafe_allow_html=True)
