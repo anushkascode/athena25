@@ -1,0 +1,30 @@
+Online database for the US State Sustainable Development Report 2021,,
+,,
+,,
+This database contains the following information:,,
+,,
+Overview,"Overall results for all states, including index score, goal dashboard, and trend dashboard for all included goals",
+US State SDR 2021 Data,"The SDR2021 data for all states; includes Leave no on behind score, raw values, normalized scores, dashboard ratings, trends & goal scores.",
+Full Dataset,Data used for generating trend analysis,
+Codebook,"List of indicators, bounds and thresholds",
+,,
+Legend,,
+Dashboard : ,,
+,green,Goal Achievement
+,yellow,Challenges remain
+,orange,Significant challenges
+,red,Major challenges
+Time Series :,,
+,↑,On track or maintaining achievement
+,➚,Moderately Increasing
+,→,Stagnating
+,↓,Decreasing
+,,
+"This data should be cited as:  Lynch, A., Sachs, J. (2021). The US State Sustainable Development Report 2021. New York: SDSN.",,
+,,
+,,
+Updates,,
+,,
+"This data was published November 16, 2021.",,
+,,
+Update Nov 19,"2 indicators that were used in the LNOB sub-index were not categorized that way in the codebook, data link was not previously included. These are both corrected in this version. ",
