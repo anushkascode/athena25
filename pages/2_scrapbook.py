@@ -10,5 +10,5 @@ def show_sticker(label, image_link, message):
         st.write(message)
 
 st.write("Complete sustainable tasks to earn stickers!")
-show_sticker("checkbox1_checked", "assets/tree.png", "Tree Planted!")
-show_sticker("checkbox2_checked", "assets/thrift.png", "Child Labor Avoided!")
+show_sticker("checkbox1_checked", "static/tree.png", "Tree Planted!")
+show_sticker("checkbox2_checked", "static/thrift.png", "Child Labor Avoided!")

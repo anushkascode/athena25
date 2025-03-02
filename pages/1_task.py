@@ -19,5 +19,5 @@ def create_task(label, image_path, session_state_key):
 
 st.title("Page 1: Task Completion")
 
-create_task("Planted a tree", "assets/tree.png","checkbox1_checked") 
-create_task("Purchase clothing secondhand", "assets/thrift.png","checkbox2_checked") 
+create_task("Planted a tree", "static/tree.png","checkbox1_checked") 
+create_task("Purchase clothing secondhand", "static/thrift.png","checkbox2_checked") 

@@ -24,8 +24,7 @@ body {
 
 #hero-logo {
     position: absolute; 
-    left: 250px; 
-    bottom: 495px;
+    top: 50px;
 }
 
 #description {
