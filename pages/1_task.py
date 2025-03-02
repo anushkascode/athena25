@@ -20,4 +20,7 @@ def create_task(label, image_path, session_state_key, message):
 st.title("Page 1: Task Completion")
 
 create_task("Planted a tree", "static/actions-sticker.png","checkbox1_checked", "making a greener world!") 
-create_task("Purchase clothing secondhand", "static/shopping-sticker.png","checkbox2_checked", "reducing waste!") 
+create_task("Buy clothing secondhand", "static/shopping-sticker.png","checkbox2_checked", "reducing waste!")
+create_task("Limit your shower to under 10 minutes", "static/energy-sticker.png", "checkbox3_checked", "saving water!")
+create_task("Purchase produce from your local farmer's market", "static/food-sticker.png", "checkbox4_checked", "supporting your community!" )
+create_task("Take low-emission transporation", "static/transportation-sticker.png", "checkbox5_checked", "reducing air pollution!")
