@@ -2,3 +2,7 @@ cd athena25
 pip3 install pipenv
 source .venv/bin/activate
 pip install streamlit
+
+-- TO RUN EACH TIME --
+source .venv/bin/activate
+streamlit run app.py
