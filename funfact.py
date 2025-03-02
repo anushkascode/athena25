@@ -4,7 +4,7 @@ import google.generativeai as genai
 from google.generativeai import types
 
 def generate(task):
-    genai.configure(api_key="AIzaSyCb03L8RGwiTqdLw74bxJaYiriVk8cI4E8")  # Replace with your actual API key
+    genai.configure(api_key="AIzaSyAQ2xC5R8EeeRxEYgeIIzrVKUTSedMX6j0")  # Replace with your actual API key
 
     model = genai.GenerativeModel("gemini-2.0-pro-exp-02-05")
 
