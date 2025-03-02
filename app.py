@@ -1,6 +1,5 @@
 import streamlit as st
 
-st.write("Hello world")
 yes = st.checkbox("Planted a tree")
 
 if yes:
