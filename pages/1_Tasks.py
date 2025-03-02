@@ -16,7 +16,8 @@ def create_task(label, image_path, session_state_key, message):
             st.error(f"Image not found: {image_path}")
     else:
         st.session_state[session_state_key] = False
-
+        
+        
 st.title("Page 1: Task Completion")
 
 create_task("Planted a tree", "static/actions-sticker.png","checkbox1_checked", "making a greener world!") 
