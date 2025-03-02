@@ -12,7 +12,7 @@ def show_sticker(label, image_link, cam_num):
 
         if f"{cam_num}_image" in st.session_state:
             uploaded_image = st.session_state[f"{cam_num}_image"]
-            st.image(uploaded_image, caption = "Your Task Image", width=150)
+            st.image(uploaded_image, width=150)
 
         if (label == "checkbox1_checked"):
             task = "Plant a tree"

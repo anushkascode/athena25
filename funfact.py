@@ -4,7 +4,7 @@ import google.generativeai as genai
 from google.generativeai import types
 
 def generate(task):
-    genai.configure(api_key="AIzaSyAx4Y1S1nRPwNpKTED4mH4jsektVuA7zuU")  # Replace with your actual API key
+    genai.configure(api_key="AIzaSyCb03L8RGwiTqdLw74bxJaYiriVk8cI4E8")  # Replace with your actual API key
 
     model = genai.GenerativeModel("gemini-2.0-pro-exp-02-05")
 
@@ -37,8 +37,7 @@ def generate(task):
         max_output_tokens=8192,
     )
 
-    system_instruction = """You are an expert on environmental science and sustainability. The users check off personal things they do that promote sustainability-- relating to topics from taking public transportation, to shopping locally or secondhand to reducing waste. Your task is to generate one-liner fun facts and analogies to encourage users who are taking steps towards a more sustainable lifestyle. The fun fact should be related to the task with creative, accessible-to-understand metrics/analogies for users to understand the impact of the task! Keep it to one or two sentences and include an accredited source, such as science journals and government websites."""
-
+    system_instruction = """Your task is to generate one-liner fun facts and analogies to encourage users who are taking steps towards a more sustainable lifestyle. Only generate ONE FUN FACT please, the fun fact should always be on the SECOND LINE of the output after a header-- Example output: ("Here's a fun fact for the task: /n Fun Fact:"). You are an expert on environmental science and sustainability. The users check off personal things they do that promote sustainability-- relating to topics from taking public transportation, to shopping locally or secondhand to reducing waste. The fun fact should be related to the task with creative, accessible-to-understand metrics/analogies for users to understand the impact of the task! Keep it short and include an accredited source, such as science journals and government websites."""
     response = model.generate_content(
         prompt,
         generation_config=generation_config,
@@ -46,12 +45,13 @@ def generate(task):
         stream=False  # Don't stream to process output easily
     )
 
-    facts = response.text.split("\n\n")  # Split the generated text by double newlines
+    facts = response.text.split("\n")  # Split the generated text by double newlines
     
     if facts:
         # lines 2， 4， 6
         # rand = random.choice([2, 4])
-        selected_fact = facts[2]
+        selected_fact = facts[0]
+        selected_fact += facts[1]
         print("Selected Fact:", selected_fact)
 
         # Save the selected fact to a file
