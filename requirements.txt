@@ -1,0 +1,4 @@
+cd athena25
+pip3 install pipenv
+source .venv/bin/activate
+pip install streamlit
