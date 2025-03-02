@@ -27,18 +27,11 @@ def create_task(label, image_path, session_state_key, message, cam_num):
         #    st.image(st.session_state[f"{cam_num}_image"], caption = "Saved Image", use_column_width = True)
     else:
         st.session_state[session_state_key] = False
-<<<<<<< HEAD
     
     
 
-=======
-        
-        
-st.title("Page 1: Task Completion")
->>>>>>> 8949699ec56aa8cb94a32a2435269c5475fff91b
 
 st.title("Complete Your Tasks!")
-
 create_task("Planted a tree", "static/actions-sticker.png","checkbox1_checked", "making a greener world!", "cam1") 
 create_task("Buy clothing secondhand", "static/shopping-sticker.png","checkbox2_checked", "reducing waste!", "cam2")
 create_task("Limit your shower to under 10 minutes", "static/energy-sticker.png", "checkbox3_checked", "saving water!", "cam3")

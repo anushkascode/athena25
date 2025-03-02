@@ -6,3 +6,6 @@ pip install streamlit
 -- TO RUN EACH TIME --
 source .venv/bin/activate
 streamlit run app.py
+
+-- GEMINI --
+pip install google-generativeai
